@@ -3,7 +3,7 @@ This coding challenge is for a .NET developer. We are making the assumption that
 
 Your task is to build an API that manages users using the scaffolded controller which has already been provided.
 
-There is no strict time limit and you won't be judged on how long it took you to complete, however we would like you to spend no more than 2 hours on this.
+There is no strict time limit, however we would like you to spend no more than 2 hours on this.
 
 1. You must use .NET Core and C#
 2. The API should be a ASP.NET Core Web API project
