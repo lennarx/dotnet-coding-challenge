@@ -31,6 +31,7 @@ namespace dotnet.challenge.api.Controllers
             Description = "This endpoint creates a user based on a form that is provided throught request body"
             )]
         [ProducesResponseType(typeof(UserDto), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(void), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> CreateUser([FromBody] UserForm userForm)
         {
