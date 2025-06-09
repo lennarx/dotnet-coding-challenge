@@ -119,6 +119,7 @@ namespace dotnet.challenge.api.Controllers
         [ProducesResponseType(typeof(void), StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(void), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> PutUser([FromRoute] Guid id, [FromBody] UserForm userForm)
         {
             var validator = new UserFormValidator();
