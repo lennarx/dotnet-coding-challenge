@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet.challenge.api", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet.challenge.data", "src\dotnet.challenge.data\dotnet.challenge.data.csproj", "{FB36E77F-347A-49A3-A26A-C17DF1DEC396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet.challenge.test", "src\dotnet.challenge.test\dotnet.challenge.test.csproj", "{93F67D75-3801-4D24-BC56-637F539FA782}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{FB36E77F-347A-49A3-A26A-C17DF1DEC396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB36E77F-347A-49A3-A26A-C17DF1DEC396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB36E77F-347A-49A3-A26A-C17DF1DEC396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F67D75-3801-4D24-BC56-637F539FA782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F67D75-3801-4D24-BC56-637F539FA782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F67D75-3801-4D24-BC56-637F539FA782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F67D75-3801-4D24-BC56-637F539FA782}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4C52A3D4-D4B6-4A5B-99D8-D4D7661ECAB5} = {7F26A7DC-6335-4CDE-A13C-D7905723C57E}
 		{FB36E77F-347A-49A3-A26A-C17DF1DEC396} = {7F26A7DC-6335-4CDE-A13C-D7905723C57E}
+		{93F67D75-3801-4D24-BC56-637F539FA782} = {7F26A7DC-6335-4CDE-A13C-D7905723C57E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7615CDFC-30D2-40D1-8C0D-5192493AA9D2}
