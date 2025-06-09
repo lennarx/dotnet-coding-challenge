@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using dotnet.challenge.data.Cache;
 using dotnet.challenge.data.Entities;
 using System;
+using dotnet.challenge.api.Services.Users;
 
 namespace dotnet.challenge.api
 {
@@ -24,6 +25,8 @@ namespace dotnet.challenge.api
         {
             services.AddControllers();
             services.AddMvc();
+
+            services.AddScoped<IUserService, UserService>();
 
             services.AddSwaggerGen(c =>
             {
