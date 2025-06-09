@@ -30,7 +30,7 @@ namespace dotnet.challenge.api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Users API", Version = "v1" });
             });
 
             services.AddSingleton<ISimpleObjectCache<Guid, User>, SimpleObjectCache<Guid, User>>();
@@ -52,7 +52,7 @@ namespace dotnet.challenge.api
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Users API V1");
                 c.RoutePrefix = string.Empty;
             });
 
