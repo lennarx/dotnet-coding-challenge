@@ -1,55 +1,37 @@
-# .NET Coding Challenge
-This coding challenge is for a .NET developer. We are making the assumption that you are familiar with .NET Core, MVC and REST.
+﻿# Unily .NET Coding Challenge
 
-Your task is to build an API that manages users using the scaffolded controller which has already been provided.
+This is the solution for Unily’s backend technical challenge.  
+It consists of a simple API to manage users in memory, built with .NET Core 3.1.
 
-There is no strict time limit, however we would like you to spend no more than 2 hours on this.
+## ✔️ Implemented Features
 
-1. You must use .NET Core and C#
-2. The API should be a ASP.NET Core Web API project
-3. The API should consume and return data as JSON
-4. You do not need to consider any security implications. This includes using HTTPS or attempting to provide any Authorization/Authentication
-6. You do not need any persistent storage. Please use the in-memory cache which has been provided
-7. You can use any NuGet package but be prepared to justify its usage
+- Full CRUD operations for users
+- Pagination support for listing users
+- Input validation using FluentValidation
+- Structured error handling
+- Basic logging
+- Unit and integration tests included
 
-## Specification
-We want you to develop an API that exposes one RESTful endpoint. This endpoint should provide standard CRUD functionality for **Users**.
+## ▶️ How to Run the Project
 
-### Users
-#### URL Formats
-**POST**
-```
-/api/users
-```
-**GET**
-```
-/api/users
-/api/users/{id}
-```
-**DELETE**
-```
-/api/users/{id}
-```
-**PUT**
-```
-/api/users/{id}
-```
-#### Fields
-| Field Name  | Data Type  | Required | Validation                               |
-|--           |--          |--        |--                                        |
-| FirstName   | `string`   | true     | max length 128                           |
-| LastName    | `string`   | false    | max length 128                           |
-| Email       | `string`   | true     | must validate to a typical email address |
-| DateOfBirth | `DateTime` | true     | must validate to a valid date            |
+1. Open the solution in Visual Studio 2019 or later.
+2. Set `dotnet.challenge.api` as the startup project.
+3. Run the solution (`F5` or `Ctrl+F5`).
+4. Swagger UI will be available at: `https://localhost:{port}/swagger`
 
- - Every user must have a unique email address
- - The user when created must be 18 years or older at the time of the request
- - When returning one user or a list of users return back the age of the user in addition to the date of birth
+## 📘 API Endpoints
 
-## How we will assess your work
-We are looking production quality code which utilizes design patterns where appropriate and conforms to best practices and principles such as SOLID, etc. Other things we will take into consideration:
+| Method | Route               | Description                       |
+|--------|---------------------|-----------------------------------|
+| POST   | `/api/User`         | Create a new user                 |
+| GET    | `/api/User`         | Retrieve paginated list of users |
+| GET    | `/api/User/{id}`    | Get a user by ID                  |
+| PUT    | `/api/User/{id}`    | Update an existing user by ID     |
+| DELETE | `/api/User/{id}`    | Delete a user by ID               |
 
- - Code should be testable
- - We expect you to be mindful of correct HTTP status code usage
+## 🧪 Running Tests
 
-You should clone this repository and when you're ready to share your work push it to private repository and add your challenge reviewer as collaborator.
+To execute tests:
+
+```bash
+dotnet test
